@@ -29,6 +29,8 @@ public class Items extends net.minecraft.init.Items
 {
     public static final Item APPLE_CHOCOLATE = item("apple_chocolate");
     public static final ItemFood APPLE_CHOCOLATE_COATED = itemFood("apple_chocolate_coated", 8);
+    public static final ItemFood APPLE_GLACED = itemFood("apple_glaced", 6);
+    public static final Item APPLE_SUGAR = item("apple_sugar");
     public static final Item BREAD_DOUGH = item("bread_dough");
     public static final Item BREAD_SLICE = item("bread_slice");
     public static final ItemFood CHOCOLATE = itemFood("chocolate", 8);
@@ -52,11 +54,15 @@ public class Items extends net.minecraft.init.Items
     public static final ItemStrawberry STRAWBERRY = new ItemStrawberry();
     public static final Item STRAWBERRY_CHOCOLATE = item("strawberry_chocolate");
     public static final ItemFood STRAWBERRY_CHOCOLATE_COATED = itemFood("strawberry_chocolate_coated", 8);
+    public static final ItemFood STRAWBERRY_GLACED = itemFood("strawberry_glaced", 6);
+    public static final Item STRAWBERRY_SUGAR = item("strawberry_sugar");
     
     public static void register()
     {
         Registry.register(APPLE_CHOCOLATE);
         Registry.register(APPLE_CHOCOLATE_COATED);
+        Registry.register(APPLE_GLACED);
+        Registry.register(APPLE_SUGAR);
         Registry.register(BREAD_DOUGH);
         Registry.register(BREAD_SLICE);
         Registry.register(CHOCOLATE);
@@ -80,12 +86,16 @@ public class Items extends net.minecraft.init.Items
         Registry.register(STRAWBERRY);
         Registry.register(STRAWBERRY_CHOCOLATE);
         Registry.register(STRAWBERRY_CHOCOLATE_COATED);
+        Registry.register(STRAWBERRY_GLACED);
+        Registry.register(STRAWBERRY_SUGAR);
     }
     
     public static void render()
     {
         Registry.render(APPLE_CHOCOLATE);
         Registry.render(APPLE_CHOCOLATE_COATED);
+        Registry.render(APPLE_GLACED);
+        Registry.render(APPLE_SUGAR);
         Registry.render(BREAD_DOUGH);
         Registry.render(BREAD_SLICE);
         Registry.render(CHOCOLATE);
@@ -109,6 +119,8 @@ public class Items extends net.minecraft.init.Items
         Registry.render(STRAWBERRY);
         Registry.render(STRAWBERRY_CHOCOLATE);
         Registry.render(STRAWBERRY_CHOCOLATE_COATED);
+        Registry.render(STRAWBERRY_GLACED);
+        Registry.render(STRAWBERRY_SUGAR);
     }
     
     private static Item item(String name)

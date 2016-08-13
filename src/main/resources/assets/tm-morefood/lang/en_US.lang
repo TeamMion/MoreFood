@@ -2,6 +2,8 @@ itemGroup.tm-morefood=GigaFood
 
 item.apple_chocolate.name=Apple + Chocolate
 item.apple_chocolate_coated.name=Chocolate Coated Apple
+item.apple_glaced.name=Glaced Apple
+item.apple_sugar.name=Apple + Sugar
 item.bread_dough.name=Bread Dough
 item.bread_slice.name=Bread Slice
 item.cocoa_bean_ground.name=Ground Cocoa Bean
@@ -25,3 +27,5 @@ item.sandwich_schnitzel.name=Schnitzel Sandwich
 item.strawberry.name=Strawberry
 item.strawberry_chocolate.name=Strawberry + Chocolate
 item.strawberry_chocolate_coated.name=Chocolate Coated Strawberry
+item.strawberry_glaced.name=Glaced Strawberry
+item.strawberry_sugar.name=Straberry + Sugar
