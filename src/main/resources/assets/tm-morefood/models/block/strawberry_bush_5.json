@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "tm-morefood:blocks/strawberry_bush_5"
+    }
+}
