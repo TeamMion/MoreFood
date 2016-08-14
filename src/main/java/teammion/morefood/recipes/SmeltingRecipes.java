@@ -37,6 +37,11 @@ public class SmeltingRecipes extends Recipes
         );
         
         Registry.addSmelting(
+                Items.APPLE_SUGAR,
+                Items.APPLE_GLACED.stack()
+        );
+        
+        Registry.addSmelting(
                 Items.BREAD_DOUGH,
                 new ItemStack(Items.BREAD)
         );
@@ -69,6 +74,11 @@ public class SmeltingRecipes extends Recipes
         Registry.addSmelting(
                 Items.STRAWBERRY_CHOCOLATE,
                 Items.STRAWBERRY_CHOCOLATE_COATED.stack()
+        );
+        
+        Registry.addSmelting(
+                Items.STRAWBERRY_SUGAR,
+                Items.STRAWBERRY_GLACED.stack()
         );
     }
 }

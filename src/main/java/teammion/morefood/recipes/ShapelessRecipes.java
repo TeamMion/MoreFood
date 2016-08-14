@@ -37,6 +37,12 @@ public class ShapelessRecipes extends Recipes
         );
         
         Registry.addShapelessRecipe(
+                Items.APPLE_SUGAR.stack(),
+                Items.APPLE,
+                Items.SUGAR
+        );
+        
+        Registry.addShapelessRecipe(
                 Items.BREAD_DOUGH.stack(2),
                 Items.FLOUR,
                 Items.FLOUR,
@@ -104,6 +110,12 @@ public class ShapelessRecipes extends Recipes
                 Items.STRAWBERRY_CHOCOLATE.stack(),
                 Items.STRAWBERRY,
                 Items.CHOCOLATE_PIECE
+        );
+        
+        Registry.addShapelessRecipe(
+                Items.STRAWBERRY_SUGAR.stack(),
+                Items.STRAWBERRY,
+                Items.SUGAR
         );
     }
 }
