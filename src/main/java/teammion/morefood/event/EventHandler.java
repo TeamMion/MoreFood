@@ -47,14 +47,9 @@ public class EventHandler
     @SubscribeEvent
     public void onDrop(LivingDropsEvent e)
     {
-        e.getDrops().add(new EntityItem(
-                e.getEntity().getEntityWorld(), e.getEntity().posX, e.getEntity().posY, e.getEntity().posZ, Items.STRAWBERRY.stack()
-        ));
-        e.getDrops().add(new EntityItem(
-                e.getEntity().getEntityWorld(), e.getEntity().posX, e.getEntity().posY, e.getEntity().posZ, Items.STRAWBERRY.stack()
-        ));
-        e.getDrops().add(new EntityItem(
-                e.getEntity().getEntityWorld(), e.getEntity().posX, e.getEntity().posY, e.getEntity().posZ, Items.STRAWBERRY.stack(2)
-        ));
+        for (int i = 1; i <= 3; i++)
+            e.getDrops().add(new EntityItem(
+                    e.getEntity().getEntityWorld(), e.getEntity().posX, e.getEntity().posY, e.getEntity().posZ, Items.STRAWBERRY.stack((int) Math.ceil(i / 2))
+            ));
     }
 }
