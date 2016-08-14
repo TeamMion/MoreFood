@@ -25,6 +25,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import teammion.mioncore.block.BlockCropsRightClickHarvest;
 import teammion.morefood.Items;
 import teammion.mioncore.block.BlockCrops;
 
@@ -35,32 +36,26 @@ import javax.annotation.Nullable;
  *
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
-public class BlockStrawberryBush extends BlockCrops
+public class BlockStrawberryBush extends BlockCropsRightClickHarvest
 {
     public BlockStrawberryBush()
     {
-        super("strawberry_bush", Items.STRAWBERRY);
+        super("strawberry_bush", Items.STRAWBERRY, 4);
     }
     
     @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
-    {
-        if (isMaxAge(state))
-        {
-            for (ItemStack drop : getDrops(worldIn, pos, state, 0))
-                spawnAsEntity(worldIn, pos, drop);
-            
-            worldIn.setBlockState(pos, withAge(4));
-            
-            return true;
-        }
-        
-        return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);
-    }
-
-    @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
-        return new AxisAlignedBB(0d, 0d, 0d, 1d, 1d, 1d);
+        return (new AxisAlignedBB[]
+        {
+            new AxisAlignedBB(0d, 0d, 0d, 1d, .0625d, 1d),
+            new AxisAlignedBB(0d, 0d, 0d, 1d, .25d, 1d),
+            new AxisAlignedBB(0d, 0d, 0d, 1d, .4375d, 1d),
+            new AxisAlignedBB(0d, 0d, 0d, 1d, .625d, 1d),
+            new AxisAlignedBB(0d, 0d, 0d, 1d, .875d, 1d),
+            new AxisAlignedBB(0d, 0d, 0d, 1d, .875d, 1d),
+            new AxisAlignedBB(0d, 0d, 0d, 1d, .875d, 1d),
+            new AxisAlignedBB(0d, 0d, 0d, 1d, .875d, 1d)
+        })[getAge(state)];
     }
 }

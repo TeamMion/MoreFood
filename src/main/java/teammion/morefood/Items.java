@@ -44,6 +44,10 @@ public class Items extends net.minecraft.init.Items
     public static final Item FLOUR = item("flour");
     public static final ItemFood FRENCH_FRIES = itemFood("french_fries", 6);
     public static final Item FRENCH_FRIES_RAW = item("french_fries_raw");
+    public static final ItemFood ICE_CREAM_CHOCOLATE = itemFood("ice_cream_chocolate", 6);
+    public static final Item ICE_CREAM_CONE = item("ice_cream_cone");
+    public static final Item ICE_CREAM_DOUGH = item("ice_cream_dough");
+    public static final ItemFood ICE_CREAM_STRAWBERRY = itemFood("ice_cream_strawberry", 6);
     public static final ItemMilkBottle MILK_BOTTLE = new ItemMilkBottle();
     public static final ItemFood SANDWICH_CHICKEN = itemFood("sandwich_chicken", 5);
     public static final ItemFood SANDWICH_FISH = itemFood("sandwich_fish", 5);
@@ -76,6 +80,10 @@ public class Items extends net.minecraft.init.Items
         Registry.register(FLOUR);
         Registry.register(FRENCH_FRIES);
         Registry.register(FRENCH_FRIES_RAW);
+        Registry.register(ICE_CREAM_CHOCOLATE);
+        Registry.register(ICE_CREAM_DOUGH);
+        Registry.register(ICE_CREAM_CONE);
+        Registry.register(ICE_CREAM_STRAWBERRY);
         Registry.register(MILK_BOTTLE);
         Registry.register(SANDWICH_CHICKEN);
         Registry.register(SANDWICH_FISH);
@@ -109,6 +117,10 @@ public class Items extends net.minecraft.init.Items
         Registry.render(FLOUR);
         Registry.render(FRENCH_FRIES);
         Registry.render(FRENCH_FRIES_RAW);
+        Registry.render(ICE_CREAM_CHOCOLATE);
+        Registry.render(ICE_CREAM_DOUGH);
+        Registry.render(ICE_CREAM_CONE);
+        Registry.render(ICE_CREAM_STRAWBERRY);
         Registry.render(MILK_BOTTLE);
         Registry.render(SANDWICH_CHICKEN);
         Registry.render(SANDWICH_FISH);

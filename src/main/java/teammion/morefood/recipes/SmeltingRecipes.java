@@ -47,6 +47,11 @@ public class SmeltingRecipes extends Recipes
         );
         
         Registry.addSmelting(
+                new ItemStack(Items.DYE, 1, 3),
+                Items.COCOA_BEAN_ROASTED.stack()
+        );
+        
+        Registry.addSmelting(
                 Items.EGG,
                 Items.EGG_BOILED.stack()
         );
@@ -62,8 +67,8 @@ public class SmeltingRecipes extends Recipes
         );
         
         Registry.addSmelting(
-                new ItemStack(Items.DYE, 1, 3),
-                Items.COCOA_BEAN_ROASTED.stack()
+                Items.ICE_CREAM_DOUGH,
+                Items.ICE_CREAM_CONE.stack()
         );
         
         Registry.addSmelting(

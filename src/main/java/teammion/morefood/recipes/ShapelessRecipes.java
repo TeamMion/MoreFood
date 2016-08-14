@@ -16,6 +16,7 @@
 
 package teammion.morefood.recipes;
 
+import net.minecraft.item.ItemStack;
 import teammion.morefood.Items;
 import teammion.morefood.Recipes;
 import teammion.morefood.util.Registry;
@@ -58,9 +59,9 @@ public class ShapelessRecipes extends Recipes
         
         Registry.addShapelessRecipe(
                 Items.CHOCOLATE_DRINK.stack(),
+                Items.COCOA_BEAN_GROUND,
+                Items.COCOA_BEAN_GROUND,
                 Items.MILK_BOTTLE,
-                Items.COCOA_BEAN_GROUND,
-                Items.COCOA_BEAN_GROUND,
                 Items.SUGAR,
                 Items.SUGAR
         );
@@ -72,8 +73,8 @@ public class ShapelessRecipes extends Recipes
         
         Registry.addShapelessRecipe(
                 Items.FISH_STICK_RAW.stack(),
-                Items.FISH,
                 Items.EGG,
+                Items.FISH,
                 Items.FLOUR,
                 Items.FLOUR
         );
@@ -90,26 +91,49 @@ public class ShapelessRecipes extends Recipes
         );
         
         Registry.addShapelessRecipe(
+                Items.ICE_CREAM_CHOCOLATE.stack(),
+                Items.CHOCOLATE_PIECE,
+                Items.ICE_CREAM_CONE,
+                Items.MILK_BOTTLE,
+                Items.SUGAR
+        );
+        
+        Registry.addShapelessRecipe(
+                Items.ICE_CREAM_DOUGH.stack(),
+                Items.FLOUR,
+                new ItemStack(Items.POTIONITEM, 1, 0),
+                Items.SUGAR
+        );
+        
+        Registry.addShapelessRecipe(
+                Items.ICE_CREAM_STRAWBERRY.stack(),
+                Items.ICE_CREAM_CONE,
+                Items.MILK_BOTTLE,
+                Items.STRAWBERRY,
+                Items.SUGAR
+        );
+        
+        Registry.addShapelessRecipe(
                 Items.MILK_BOTTLE.stack(4),
-                Items.MILK_BUCKET,
                 Items.GLASS_BOTTLE,
                 Items.GLASS_BOTTLE,
                 Items.GLASS_BOTTLE,
-                Items.GLASS_BOTTLE
+                Items.GLASS_BOTTLE,
+                Items.MILK_BUCKET
         );
         
         Registry.addShapelessRecipe(
                 Items.SCHNITZEL_RAW.stack(),
-                Items.PORKCHOP,
                 Items.EGG,
                 Items.FLOUR,
-                Items.FLOUR
+                Items.FLOUR,
+                Items.PORKCHOP
         );
         
         Registry.addShapelessRecipe(
                 Items.STRAWBERRY_CHOCOLATE.stack(),
-                Items.STRAWBERRY,
-                Items.CHOCOLATE_PIECE
+                Items.CHOCOLATE_PIECE,
+                Items.STRAWBERRY
         );
         
         Registry.addShapelessRecipe(

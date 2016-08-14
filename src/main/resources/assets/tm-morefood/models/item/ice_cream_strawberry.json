@@ -1,0 +1,6 @@
+{
+    "parent": "tm-morefood:item/_default",
+    "textures": {
+        "layer0": "tm-morefood:items/ice_cream_strawberry"
+    }
+}
