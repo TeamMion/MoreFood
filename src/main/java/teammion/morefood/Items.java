@@ -125,16 +125,16 @@ public class Items extends net.minecraft.init.Items
     
     private static Item item(String name)
     {
-        return new Item(name, CreativeTabs.GIGAFOOD);
+        return new Item(name, CreativeTabs.MOREFOOD);
     }
     
     private static ItemFood itemFood(String name, int amount)
     {
-        return new ItemFood(name, amount, CreativeTabs.GIGAFOOD);
+        return new ItemFood(name, amount, CreativeTabs.MOREFOOD);
     }
     
     private static ItemDrink itemDrink(String name, int amount)
     {
-        return new ItemDrink(name, amount, CreativeTabs.GIGAFOOD);
+        return new ItemDrink(name, amount, CreativeTabs.MOREFOOD);
     }
 }

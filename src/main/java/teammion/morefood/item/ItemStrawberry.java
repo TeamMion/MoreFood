@@ -36,7 +36,7 @@ public class ItemStrawberry extends ItemFood
 {
     public ItemStrawberry()
     {
-        super("strawberry", 2, CreativeTabs.GIGAFOOD);
+        super("strawberry", 2, CreativeTabs.MOREFOOD);
     }
     
     @Override

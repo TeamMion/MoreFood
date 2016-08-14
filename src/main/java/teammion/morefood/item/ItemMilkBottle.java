@@ -31,7 +31,7 @@ public class ItemMilkBottle extends ItemDrink
 {
     public ItemMilkBottle()
     {
-        super("milk_bottle", 2, CreativeTabs.GIGAFOOD);
+        super("milk_bottle", 2, CreativeTabs.MOREFOOD);
     }
     
     @Override

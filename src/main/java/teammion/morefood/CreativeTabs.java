@@ -25,7 +25,7 @@ import net.minecraft.item.Item;
  */
 public abstract class CreativeTabs extends net.minecraft.creativetab.CreativeTabs
 {
-    public static final CreativeTabs GIGAFOOD = new CreativeTabs("tm-morefood")
+    public static final CreativeTabs MOREFOOD = new CreativeTabs("tm-morefood")
     {
         @Override
         public Item getTabIconItem()
