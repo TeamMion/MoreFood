@@ -16,13 +16,18 @@
 
 package teammion.morefood.proxy;
 
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import teammion.morefood.Blocks;
+import teammion.morefood.Config;
 import teammion.morefood.Items;
 import teammion.morefood.Recipes;
 import teammion.morefood.event.EventHandler;
+
+import java.util.ArrayList;
 
 /**
  * Created on 11.08.16 at 14:11
@@ -36,6 +41,8 @@ public class CommonProxy extends Proxy
     {
         super.preInit(e);
         
+        Config.load(e);
+        
         Items.register();
         Blocks.register();
     }
@@ -46,7 +53,20 @@ public class CommonProxy extends Proxy
         super.init(e);
         
         Recipes.registerAll();
-
+        
         MinecraftForge.EVENT_BUS.register(new EventHandler());
+    }
+    
+    @Override
+    public void postInit(FMLPostInitializationEvent e)
+    {
+        if (Config.isDeleteBreadRecipe())
+        {
+            new ArrayList<>(CraftingManager.getInstance().getRecipeList()).forEach(recipe ->
+            {
+                if (recipe != null && recipe.getRecipeOutput() != null && recipe.getRecipeOutput().getItem() == Items.BREAD)
+                    CraftingManager.getInstance().getRecipeList().remove(recipe);
+            });
+        }
     }
 }

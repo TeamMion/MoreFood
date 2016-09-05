@@ -17,6 +17,7 @@
 package teammion.morefood.recipes;
 
 import net.minecraft.item.ItemStack;
+import teammion.morefood.Config;
 import teammion.morefood.Items;
 import teammion.morefood.Recipes;
 import teammion.morefood.util.Registry;
@@ -43,14 +44,15 @@ public class ShapelessRecipes extends Recipes
                 Items.SUGAR
         );
         
-        Registry.addShapelessRecipe(
-                Items.BREAD_DOUGH.stack(2),
-                Items.FLOUR,
-                Items.FLOUR,
-                Items.FLOUR,
-                Items.FLOUR,
-                Items.WATER_BUCKET
-        );
+        if (Config.isRegisterBreadRecipe())
+            Registry.addShapelessRecipe(
+                    Items.BREAD_DOUGH.stack(2),
+                    Items.FLOUR,
+                    Items.FLOUR,
+                    Items.FLOUR,
+                    Items.FLOUR,
+                    Items.WATER_BUCKET
+            );
         
         Registry.addShapelessRecipe(
                 Items.BREAD_SLICE.stack(2),

@@ -26,7 +26,7 @@ buildscript
 apply plugin: "net.minecraftforge.gradle.forge"
 apply plugin: "com.matthewprenger.cursegradle"
 
-version = modver + "-" + (release != "release" ? release + "." + releasever : "")
+version = modver + (release != "release" ? "-" + release + "." + releasever : "")
 group= modgroup
 archivesBaseName = modid + "_" + mcversion
 

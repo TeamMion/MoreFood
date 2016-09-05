@@ -28,7 +28,7 @@ import teammion.morefood.proxy.Proxy;
  *
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
-@Mod(modid = MoreFood.MODID, dependencies = "required-after:mioncore@[1.0.0-rc.1,)")
+@Mod(modid = MoreFood.MODID, dependencies = "required-after:mioncore@[1.0.0-rc.2,)")
 public class MoreFood
 {
     public static final String MODID = "tm-morefood";

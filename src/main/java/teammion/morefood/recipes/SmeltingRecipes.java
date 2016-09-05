@@ -17,6 +17,7 @@
 package teammion.morefood.recipes;
 
 import net.minecraft.item.ItemStack;
+import teammion.morefood.Config;
 import teammion.morefood.Items;
 import teammion.morefood.Recipes;
 import teammion.morefood.util.Registry;
@@ -41,10 +42,11 @@ public class SmeltingRecipes extends Recipes
                 Items.APPLE_GLACED.stack()
         );
         
-        Registry.addSmelting(
-                Items.BREAD_DOUGH,
-                new ItemStack(Items.BREAD)
-        );
+        if (Config.isRegisterBreadRecipe())
+            Registry.addSmelting(
+                    Items.BREAD_DOUGH,
+                    new ItemStack(Items.BREAD)
+            );
         
         Registry.addSmelting(
                 new ItemStack(Items.DYE, 1, 3),
