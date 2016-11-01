@@ -21,7 +21,7 @@ apply plugin: "net.minecraftforge.gradle.forge"
 apply plugin: "com.matthewprenger.cursegradle"
 
 version = modversion
-group = "teammion." + modid
+group = "teammion.morefood"
 archivesBaseName = modid + "_" + mcversion
 
 sourceCompatibility = targetCompatibility = "1.8"
