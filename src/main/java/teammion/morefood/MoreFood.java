@@ -33,6 +33,9 @@ public class MoreFood
 {
     public static final String MODID = "tm-morefood";
     
+    @Mod.Instance
+    public static MoreFood instance;
+    
     @SidedProxy(
             serverSide = Proxy.SERVER,
             clientSide = Proxy.CLIENT
