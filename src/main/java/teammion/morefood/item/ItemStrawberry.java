@@ -23,9 +23,9 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import teammion.mioncore.item.ItemFood;
 import teammion.morefood.Blocks;
 import teammion.morefood.CreativeTabs;
-import teammion.mioncore.item.ItemFood;
 
 /**
  * Created on 11.08.16 at 17:39

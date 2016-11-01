@@ -16,8 +16,8 @@
 
 package teammion.morefood.util;
 
-import teammion.morefood.MoreFood;
 import teammion.mioncore.util.IItem;
+import teammion.morefood.MoreFood;
 
 /**
  * Created on 11.08.16 at 14:49

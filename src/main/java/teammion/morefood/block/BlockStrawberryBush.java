@@ -17,30 +17,22 @@
 package teammion.morefood.block;
 
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
-import teammion.mioncore.block.BlockCropsRightClickHarvest;
+import teammion.mioncore.block.BlockPlant;
 import teammion.morefood.Items;
-import teammion.mioncore.block.BlockCrops;
-
-import javax.annotation.Nullable;
 
 /**
  * Created on 13.08.16 at 17:50
  *
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
-public class BlockStrawberryBush extends BlockCropsRightClickHarvest
+public class BlockStrawberryBush extends BlockPlant
 {
     public BlockStrawberryBush()
     {
-        super("strawberry_bush", Items.STRAWBERRY, 4);
+        super("strawberry_bush", Items.STRAWBERRY);
     }
     
     @Override
@@ -57,5 +49,11 @@ public class BlockStrawberryBush extends BlockCropsRightClickHarvest
             new AxisAlignedBB(0d, 0d, 0d, 1d, .875d, 1d),
             new AxisAlignedBB(0d, 0d, 0d, 1d, .875d, 1d)
         })[getAge(state)];
+    }
+    
+    @Override
+    public int enableRightClickHarvest()
+    {
+        return 4;
     }
 }
