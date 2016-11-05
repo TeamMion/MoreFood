@@ -16,7 +16,7 @@
 
 package teammion.morefood;
 
-import teammion.mioncore.item.*;
+import teammion.mioncore.api.item.*;
 import teammion.morefood.item.*;
 import teammion.morefood.util.Registry;
 
@@ -98,41 +98,41 @@ public class Items extends net.minecraft.init.Items
         Registry.register(STRAWBERRY_SUGAR);
     }
     
-    public static void render()
+    public static void registerModel()
     {
-        Registry.render(APPLE_CHOCOLATE);
-        Registry.render(APPLE_CHOCOLATE_COATED);
-        Registry.render(APPLE_GLACED);
-        Registry.render(APPLE_SUGAR);
-        Registry.render(BREAD_DOUGH);
-        Registry.render(BREAD_SLICE);
-        Registry.render(CHOCOLATE);
-        Registry.render(CHOCOLATE_DRINK);
-        Registry.render(CHOCOLATE_PIECE);
-        Registry.render(COCOA_BEAN_GROUND);
-        Registry.render(COCOA_BEAN_ROASTED);
-        Registry.render(EGG_BOILED);
-        Registry.render(FISH_STICK);
-        Registry.render(FISH_STICK_RAW);
-        Registry.render(FLOUR);
-        Registry.render(FRENCH_FRIES);
-        Registry.render(FRENCH_FRIES_RAW);
-        Registry.render(ICE_CREAM_CHOCOLATE);
-        Registry.render(ICE_CREAM_DOUGH);
-        Registry.render(ICE_CREAM_CONE);
-        Registry.render(ICE_CREAM_STRAWBERRY);
-        Registry.render(MILK_BOTTLE);
-        Registry.render(SANDWICH_CHICKEN);
-        Registry.render(SANDWICH_FISH);
-        Registry.render(SANDWICH_PORKCHOP);
-        Registry.render(SANDWICH_SCHNITZEL);
-        Registry.render(SCHNITZEL);
-        Registry.render(SCHNITZEL_RAW);
-        Registry.render(STRAWBERRY);
-        Registry.render(STRAWBERRY_CHOCOLATE);
-        Registry.render(STRAWBERRY_CHOCOLATE_COATED);
-        Registry.render(STRAWBERRY_GLACED);
-        Registry.render(STRAWBERRY_SUGAR);
+        Registry.registerModel(APPLE_CHOCOLATE);
+        Registry.registerModel(APPLE_CHOCOLATE_COATED);
+        Registry.registerModel(APPLE_GLACED);
+        Registry.registerModel(APPLE_SUGAR);
+        Registry.registerModel(BREAD_DOUGH);
+        Registry.registerModel(BREAD_SLICE);
+        Registry.registerModel(CHOCOLATE);
+        Registry.registerModel(CHOCOLATE_DRINK);
+        Registry.registerModel(CHOCOLATE_PIECE);
+        Registry.registerModel(COCOA_BEAN_GROUND);
+        Registry.registerModel(COCOA_BEAN_ROASTED);
+        Registry.registerModel(EGG_BOILED);
+        Registry.registerModel(FISH_STICK);
+        Registry.registerModel(FISH_STICK_RAW);
+        Registry.registerModel(FLOUR);
+        Registry.registerModel(FRENCH_FRIES);
+        Registry.registerModel(FRENCH_FRIES_RAW);
+        Registry.registerModel(ICE_CREAM_CHOCOLATE);
+        Registry.registerModel(ICE_CREAM_DOUGH);
+        Registry.registerModel(ICE_CREAM_CONE);
+        Registry.registerModel(ICE_CREAM_STRAWBERRY);
+        Registry.registerModel(MILK_BOTTLE);
+        Registry.registerModel(SANDWICH_CHICKEN);
+        Registry.registerModel(SANDWICH_FISH);
+        Registry.registerModel(SANDWICH_PORKCHOP);
+        Registry.registerModel(SANDWICH_SCHNITZEL);
+        Registry.registerModel(SCHNITZEL);
+        Registry.registerModel(SCHNITZEL_RAW);
+        Registry.registerModel(STRAWBERRY);
+        Registry.registerModel(STRAWBERRY_CHOCOLATE);
+        Registry.registerModel(STRAWBERRY_CHOCOLATE_COATED);
+        Registry.registerModel(STRAWBERRY_GLACED);
+        Registry.registerModel(STRAWBERRY_SUGAR);
     }
     
     private static Item item(String name)

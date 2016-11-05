@@ -33,7 +33,7 @@ public class Blocks extends net.minecraft.init.Blocks
         Registry.register(STRAWBERRY_BUSH);
     }
     
-    public static void render()
+    public static void registerModel()
     {
     }
 }

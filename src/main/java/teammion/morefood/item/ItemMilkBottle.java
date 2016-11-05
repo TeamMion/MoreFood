@@ -19,7 +19,7 @@ package teammion.morefood.item;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import teammion.mioncore.item.ItemDrink;
+import teammion.mioncore.api.item.ItemDrink;
 import teammion.morefood.CreativeTabs;
 
 /**

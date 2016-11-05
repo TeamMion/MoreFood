@@ -16,7 +16,7 @@
 
 package teammion.morefood.util;
 
-import teammion.mioncore.util.IItem;
+import teammion.mioncore.api.util.IItem;
 import teammion.morefood.MoreFood;
 
 /**
@@ -24,15 +24,15 @@ import teammion.morefood.MoreFood;
  *
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
-public class Registry extends teammion.mioncore.util.Registry
+public class Registry extends teammion.mioncore.api.util.Registry
 {
-    public static void render(IItem item, int meta, String name)
+    public static void registerModel(IItem item, int meta)
     {
-        render(item, meta, MoreFood.MODID, name);
+        regiserModel(item, meta, MoreFood.MODID + ":" + item.item().getUnlocalizedName().substring(5));
     }
     
-    public static void render(IItem item)
+    public static void registerModel(IItem item)
     {
-        render(item, 0, item.item().getUnlocalizedName().substring(5));
+        registerModel(item, 0);
     }
 }
