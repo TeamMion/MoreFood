@@ -48,17 +48,17 @@ public class ItemStrawberry extends ItemFood
     }
     
     @Override
-    public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+    public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
         if (worldIn.getBlockState(pos).getBlock() == Blocks.FARMLAND && facing == EnumFacing.UP)
         {
             worldIn.setBlockState(pos.up(), Blocks.STRAWBERRY_BUSH.getDefaultState());
             
-            stack.stackSize--;
+            playerIn.getActiveItemStack().func_190918_g(1);
             
             return EnumActionResult.SUCCESS;
         }
         
-        return super.onItemUse(stack, playerIn, worldIn, pos, hand, facing, hitX, hitY, hitZ);
+        return super.onItemUse(playerIn, worldIn, pos, hand, facing, hitX, hitY, hitZ);
     }
 }

@@ -16,7 +16,7 @@
 
 package teammion.morefood;
 
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 /**
  * Created on 11.08.16 at 17:41
@@ -28,9 +28,9 @@ public abstract class CreativeTabs extends net.minecraft.creativetab.CreativeTab
     public static final CreativeTabs MOREFOOD = new CreativeTabs("tm-morefood")
     {
         @Override
-        public Item getTabIconItem()
+        public ItemStack getTabIconItem()
         {
-            return Items.STRAWBERRY;
+            return Items.STRAWBERRY.stack();
         }
     };
     
