@@ -54,7 +54,7 @@ public class ItemStrawberry extends ItemFood
         {
             worldIn.setBlockState(pos.up(), Blocks.STRAWBERRY_BUSH.getDefaultState());
             
-            playerIn.getActiveItemStack().func_190918_g(1);
+            playerIn.getActiveItemStack().shrink(1);
             
             return EnumActionResult.SUCCESS;
         }
