@@ -1,6 +1,6 @@
 [
     {
-        "modid": "tm-morefood",
+        "modid": "${modid}",
         "name": "MoreFood",
         "description": "Bringing the next logical step from vanilla food. More food-items and a new crop on top.",
         "version": "${version}",
@@ -11,6 +11,6 @@
         "credits": "Copyright (c) 2016, Team Mion",
         "logoFile": "logo.png",
         "screenshots": [],
-        "dependencies": [ "mioncore" ]
+        "dependencies": []
     }
 ]

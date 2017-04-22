@@ -20,9 +20,8 @@ buildscript {
 apply plugin: "net.minecraftforge.gradle.forge"
 apply plugin: "com.matthewprenger.cursegradle"
 
-version = modversion
-group = "teammion.morefood"
-archivesBaseName = modid + "_" + mcversion
+group = "org.teammion.morefood"
+archivesBaseName = "${modid}_${mc}"
 
 sourceCompatibility = targetCompatibility = "1.8"
 
@@ -31,26 +30,29 @@ compileJava {
 }
 
 minecraft {
-    version = mcversion + "-" + forgeversion
+    version = "${mc}-${forge}"
     
     runDir = "run"
     
-    mappings = mcpmappings
+    mappings = mcp
     
     makeObfSourceJar = false
 }
 
-dependencies {
-    compile files("libs/mioncore_" + mcversion + "-" + mioncore + "-deobf.jar")
+jar {
+    from sourceSets.api.output
+    from sourceSets.main.output
 }
 
 task deobfJar(type : Jar) {
+    from sourceSets.api.output
     from sourceSets.main.output
     
     classifier = "deobf"
 }
 
 task deobfSourceJar(type : Jar) {
+    from sourceSets.api.java
     from sourceSets.main.java
     from sourceSets.main.resources
     
@@ -66,33 +68,30 @@ curseforge {
     apiKey = System.getenv().CURSE_API_KEY ? System.getenv().CURSE_API_KEY : "devBuild"
     
     project {
-        id = curse_id
+        id = curse
         
-        changelog = ""
+        changelog = "Forge version: ${mc}-${forge}"
         
-        releaseType = type == "rc" ? "release" : type
+        releaseType = release
         
-        addGameVersion mcversion
+        addGameVersion mc
         
         mainArtifact jar
         
         addArtifact deobfSourceJar
         addArtifact deobfJar
-        
-        relations {
-            requiredLibrary "mioncore"
-        }
     }
 }
 
 processResources {
+    inputs.property "modid", modid
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
     
     from(sourceSets.main.resources.srcDirs) {
         include "mcmod.info"
         
-        expand "version": project.version, "mcversion": project.minecraft.version
+        expand "modid" : modid, "version" : project.version, "mcversion" : project.minecraft.version
     }
     
     from(sourceSets.main.resources.srcDirs) {
